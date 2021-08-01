@@ -33,7 +33,7 @@ export default class ColecaoCliente implements ClienteRepositorio {
     }
   }
 
-  async excluir(cliente: Cliente): Primise<void> {
+  async excluir(cliente: Cliente): Promise<void> {
     return this.colecao().doc(cliente.id).delete();
   }
 
